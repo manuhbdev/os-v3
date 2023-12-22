@@ -277,10 +277,12 @@ export function DesktopPage() {
     const styles = `
     ${__selector}{
       height: 100%;
-      background-color: var(--content__bg-color);
+      background-color: var(--desktop-page-bg);
       display: flex;
       flex-direction: column;
       position: relative;
+      transition:all .3s ease-in-out;
+
       /* ICON */
 
       .icon {
@@ -303,7 +305,7 @@ export function DesktopPage() {
         .min_app {
           width: 48px;
           height: 48px;
-          background-color: var(--navbar__apps__bg-color);
+          background-color: var(--desktop__min_app-bg);
           border-radius: var(--border-radius);
           border: var(--border);
       
@@ -321,7 +323,7 @@ export function DesktopPage() {
             opacity: 0.9;
           }
           &.active {
-            background-color: var(--navbar__apps__bg-color--active);
+            background-color: var(--desktop__min_app--active);
           }
         }
       }
@@ -385,7 +387,7 @@ export function DesktopPage() {
       }
       
       .notification_bar {
-        background-color: #e1af26;
+        background-color: var(--desktop__notification-bar-bg);
         display: flex;
         align-items: center;
         justify-content: flex-end;
@@ -436,7 +438,7 @@ export function DesktopPage() {
             padding: 1rem;
             opacity: 0.8;
             &:hover {
-              background-color: #e1af26;
+              background-color: var(--desktop__icon-hover);
             }
           }
         }
@@ -476,7 +478,7 @@ export function DesktopPage() {
             z-index: 5;
           }
           .window.active .window__header {
-            background-color: #f0b910;
+            background-color: var(--desktop__window_header-active);
           }
           .window__header {
             background-color: var(--window__header__bg-color);

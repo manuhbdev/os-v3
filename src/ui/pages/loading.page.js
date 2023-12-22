@@ -5,6 +5,7 @@ import {
   get_system,
   get_users,
   set_fs,
+  set_online_status,
   set_system,
   set_system_loaded,
   set_users,
@@ -59,6 +60,21 @@ export function LoadingPage() {
     console.log('⚙️ system', get_system());
     console.log('📂 file system', get_fs());
     console.log('👤 users', get_users());
+
+    // internet status
+    set_online_status(navigator.onLine);
+    const offline_banner = document.getElementById('offline_banner');
+    window.addEventListener('online', (e) => {
+      set_online_status(true);
+      offline_banner.classList.add('hide');
+      document.body.classList.remove('offline');
+    });
+    window.addEventListener('offline', (e) => {
+      set_online_status(false);
+      offline_banner.classList.remove('hide');
+      document.body.classList.add('offline');
+    });
+
     setTimeout(() => {
       router.navigate(APP_PATHS.LOGIN);
     }, 1 * 1000);

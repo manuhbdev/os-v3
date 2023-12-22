@@ -6,6 +6,16 @@
   --border-radius: 0px;
   --border-radius: 10px;
 
+  /*pages*/
+  --login-page-bg: rgb(16, 16, 160);
+  --desktop-page-bg: #ebe2cc;
+  --desktop__notification-bar-bg: #e1af26;
+  --desktop__window_header: aliceblue;
+
+  --desktop__window_header-active: #f0b910;
+  --desktop__min_app-bg: whitesmoke;
+  --desktop__min_app--active: #f0b910;
+  --desktop__icon-hover: #e1af26;
   --color: #2f2f2f;
   /* CONTENT */
   --content__bg-color: lightcyan;
@@ -20,6 +30,7 @@
   /* WINDOW */
   --window__header__bg-color: #cfc7b0d2;
   --window__header__bg-color: #b5b1a5;
+
   --window__header__height: 5%;
   --window__content__bg-color: #f0ebde;
   --window__shadow: 2px 6px 0px 1px rgb(51, 43, 43);
@@ -53,7 +64,48 @@ body {
   height: 100%;
   overflow: hidden;
 }
+body.offline {
+  --login-page-bg: gray;
+  --desktop-page-bg: gray;
+  --desktop__notification-bar-bg: whitesmoke;
+  --desktop__icon-hover: whitesmoke;
+  --window__header__bg-color: #333;
+  --desktop__window_header-active: rgb(189, 188, 188);
+  --desktop__min_app-bg: #333;
+  --desktop__min_app--active: rgb(189, 188, 188);
+
+  #open_apps_bar {
+    bottom: 60px;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
 #app {
   height: 100%;
   font-family: 'Courier New', Courier, monospace;
+}
+
+#offline_banner {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  background-color: #333;
+  color: whitesmoke;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+
+  > * {
+    display: block;
+  }
+  &.hide {
+    height: 0;
+
+    > * {
+      display: none;
+    }
+  }
 }

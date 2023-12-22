@@ -40,13 +40,13 @@ export function LoginPage() {
     const styles = `
         ${__selector}{
           height: 100%;
-          background-color: rgb(16, 16, 160);
+          background-color: var(--login-page-bg);
           display: flex;
           align-items: center;
           justify-content: center;
           gap: 1rem;
           color: white;
-      
+          transition:all .3s ease-in-out;
           .users {
             display: flex;
             gap: 1rem;
