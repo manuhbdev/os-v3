@@ -205,6 +205,7 @@ export function DesktopPage() {
         w.isActive = false;
         w.windowHTML.classList.remove('active');
       }
+      draw_opened_apps_bar();
     });
   }
 
@@ -364,7 +365,7 @@ export function DesktopPage() {
         height: 2rem;
         width: 80%;
         background-color: transparent;
-        background-color: #f0b910;
+        background-color: var(--desktop__window_header-active);
         padding-left: 0.3rem;
         border-radius:var(--border-radius)
       }

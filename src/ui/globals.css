@@ -65,6 +65,7 @@ body {
   overflow: hidden;
 }
 body.offline {
+  opacity: 0.7;
   --login-page-bg: gray;
   --desktop-page-bg: gray;
   --desktop__notification-bar-bg: whitesmoke;
