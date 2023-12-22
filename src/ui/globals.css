@@ -1,0 +1,59 @@
+:root {
+  --border--width: 3px;
+  --border--style: solid;
+  --border: var(--border--width) var(--border--style) #2f2d2d;
+  --border-radius: 20px;
+  --border-radius: 0px;
+  --border-radius: 10px;
+
+  --color: #2f2f2f;
+  /* CONTENT */
+  --content__bg-color: lightcyan;
+  --content__bg-color: beige;
+  --content__bg-color: #ebe2cc;
+  /* NAV-BAR */
+  --navbar__bg-color: #8adef3;
+  --navbar__bg-color: transparent;
+  --navbar__bg-color: #c5bead;
+  --navbar__apps__bg-color: whitesmoke;
+  --navbar__apps__bg-color--active: #f0b910;
+  /* WINDOW */
+  --window__header__bg-color: #cfc7b0d2;
+  --window__header__bg-color: #b5b1a5;
+  --window__header__height: 5%;
+  --window__content__bg-color: #f0ebde;
+  --window__shadow: 2px 6px 0px 1px rgb(51, 43, 43);
+
+  --window__controls__border-radius: 9px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*::-webkit-scrollbar {
+  width: 1rem;
+  cursor: pointer;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: rgba(128, 128, 128, 0.39);
+  border: var(--border);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #f0b910;
+
+  border: var(--border);
+  cursor: pointer;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+#app {
+  height: 100%;
+  font-family: 'Courier New', Courier, monospace;
+}
