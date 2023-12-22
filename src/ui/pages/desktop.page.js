@@ -41,7 +41,7 @@ export function DesktopPage() {
     __target_element.appendChild(node_template);
   }
   function mounted() {
-    console.log('user', get_users().current);
+    console.log('🪼 user', get_users().current);
     set_context_menu();
     create_all_desktop_icons();
     draw_all_desktop_icons();

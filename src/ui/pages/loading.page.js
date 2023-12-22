@@ -2,6 +2,7 @@ import { APP_PATHS } from '../../app.routes';
 import { router } from '../../core/router.core';
 import {
   get_system,
+  get_users,
   set_fs,
   set_system,
   set_system_loaded,
@@ -54,7 +55,9 @@ export function LoadingPage() {
     storage.save_users();
 
     set_system_loaded(true);
-    console.log('system loaded', get_system());
+    console.log('⚙️ system', get_system());
+    console.log('📂 file system', get_fs());
+    console.log('👤 users', get_users());
     setTimeout(() => {
       router.navigate(APP_PATHS.LOGIN);
     }, 1 * 1000);
